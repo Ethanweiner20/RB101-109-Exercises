@@ -1,0 +1,1 @@
+File::path is a utility method that converts a given file path to its related string. File#path is an instance method that returns the pathname (as a string) of the file on which it is called.
