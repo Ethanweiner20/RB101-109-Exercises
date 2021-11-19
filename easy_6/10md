@@ -1,0 +1,59 @@
+## Right Triangles
+
+## PROBLEM
+
+*Explicit Requirements*:
+- **Input**: A side length _n_
+- **Output**: A displayed right triangle of starts whose sides each have _n_
+stars
+- The hypotenuse should have 1 end at the lower-left of the triangle, & the
+other end at the upper-right
+
+*Questions*:
+- Can n be 0 or 1? 
+- Should any newlines be printed?
+
+*Implicit Requirements*:
+
+*Mental Models*:
+- The number of stars is equal to the current row # starting at 1
+
+
+## EXAMPLES/TESTS
+
+triangle(5)
+
+    *
+   **
+  ***
+ ****
+*****
+
+## DATA STRUCTURES
+
+Array
+
+## ALGORITHM
+
+Given a side length of _n_
+
+- Iterate from 1 to _n_
+  - Construct the row
+  - Display the row
+
+*Sub-Problems*:
+
+# Construct a row
+
+*There should be row_number stars + (length - row_number) spaces = length*
+
+Given the _row_number_ and _row_length_:
+
+- Initialize a string
+- Append `row_length` minus `row_number` spaces
+- Append `row_number` stars
+- Return the string
+
+## CODE
+
+*Implementation Details*:
