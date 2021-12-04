@@ -17,3 +17,5 @@ end
 puts crunch_regex('ddaaiillyy ddoouubbllee') == 'daily double'
 puts crunch_regex('a') == 'a'
 puts crunch_regex('') == ''
+
+# Don't necessarily need to think too far down -- I have a habit of doing that too

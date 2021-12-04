@@ -1,61 +1,61 @@
-# def swap(string)
-#   words = string.split(' ')
-#   words.map { |word| swap_word(word) }.join(' ')
-# end
-
-# # puts swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
-# # puts swap('Abcde') == 'ebcdA'
-# # puts swap('a') == 'a'
-
-# def swap_word(word)
-#   word[0], word[-1] = word[-1], word[0]
-#   word
-# end
-
-# def swap_word_v2(word)
-#   first_character = word[0] # Object ID: X
-#   last_character = word[word.length - 1] # Object ID: Y
-#   word[0] = last_character # OBJECT ID: Y
-#   word[word.length - 1] = first_character # OBJECT ID: X
-#   word
-# end
-
-# # Note: The swap occurs correctly because of the way that variables point to
-# # objects in Ruby
-
-# # puts swap_word('a') == 'a'
-# # puts swap_word('abc') #== 'cba'
+def swap(string)
+  words = string.split(' ')
+  words.map { |word| swap_word(word) }.join(' ')
+end
 
 # puts swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
 # puts swap('Abcde') == 'ebcdA'
 # puts swap('a') == 'a'
 
-def swap(string)
-  words = string.split(' ')
-  words.each { |word| swap_first_last_characters(word[0], word[-1]) }
-  words.join(' ')
+def swap_word(word)
+  word[0], word[-1] = word[-1], word[0]
+  word
 end
 
-def swap_first_last_characters(first, last)
-  p first.object_id
-  p last.object_id
+def swap_word_v2(word)
+  first_character = word[0] # Object ID: X
+  last_character = word[word.length - 1] # Object ID: Y
+  word[0] = last_character # OBJECT ID: Y
+  word[word.length - 1] = first_character # OBJECT ID: X
+  word
 end
 
-word = "ethan"
-ethan = word
+# Note: The swap occurs correctly because of the way that variables point to
+# objects in Ruby
 
-# PROBLEM: [] only returns a substring -- it is not directly element access
-# Array[]=, on the other hand, IS direct element access
+# puts swap_word('a') == 'a'
+# puts swap_word('abc') #== 'cba'
 
-p word[0].object_id
-p word[1].object_id
-word[0].gsub!("e", "h")
+puts swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
+puts swap('Abcde') == 'ebcdA'
+puts swap('a') == 'a'
 
-p word
-p ethan
+# def swap(string)
+#   words = string.split(' ')
+#   words.each { |word| swap_first_last_characters(word[0], word[-1]) }
+#   words.join(' ')
+# end
 
-p ethan[0].object_id
-p ethan[1].object_id
+# def swap_first_last_characters(first, last)
+#   p first.object_id
+#   p last.object_id
+# end
+
+# word = "ethan"
+# ethan = word
+
+# # PROBLEM: [] only returns a substring -- it is not directly element access
+# # Array[]=, on the other hand, IS direct element access
+
+# p word[0].object_id
+# p word[1].object_id
+# word[0].gsub!("e", "h")
+
+# p word
+# p ethan
+
+# p ethan[0].object_id
+# p ethan[1].object_id
 
 # puts swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
 # puts swap('Abcde') == 'ebcdA'
